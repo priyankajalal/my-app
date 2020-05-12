@@ -1,10 +1,14 @@
+import { MatSelectModule } from "@angular/material/select";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-
 import { MatSliderModule } from "@angular/material/slider";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatRadioModule } from "@angular/material/radio";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatInputModule } from "@angular/material/input";
+import { MatIconModule } from "@angular/material/icon";
+import { MatTabsModule } from "@angular/material/tabs";
+import { MatTableModule } from "@angular/material/table";
 
 let myModules: any[] = [
   CommonModule,
@@ -12,11 +16,15 @@ let myModules: any[] = [
   MatCheckboxModule,
   MatRadioModule,
   MatProgressSpinnerModule,
+  MatSelectModule,
+  MatInputModule,
+  MatIconModule,
+  MatTabsModule,
+  MatTableModule,
 ];
 
 @NgModule({
   declarations: [],
-  imports: myModules,
   exports: myModules.concat([]),
 })
 export class MaterialModule {}

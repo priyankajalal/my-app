@@ -1,0 +1,26 @@
+<mat-tab-group>
+  <!-- <ng-template *ngFor="let item of tabData">
+    <mat-tab [label]="item.label"> {{ item.content }}</mat-tab>
+  </ng-template> -->
+
+  <mat-tab *ngFor="let item of newsData | keyvalue" [label]="item.key">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody class="newsBody">
+        <tr *ngFor="let news of item.value">
+          <td class="newsBorder">
+            <h1>{{ news.title }}</h1>
+            <h4>{{ news.pubDate }}</h4>
+            <div [innerHtml]="news.description"></div>
+            <div class="read-more">
+              <a [href]="news.link" target="_blank">Read more</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-tab>
+
+  <!-- <mat-tab *ngFor="let item of tabData" [label]="item.label">
+    {{ item.content }}
+  </mat-tab> -->
+</mat-tab-group>

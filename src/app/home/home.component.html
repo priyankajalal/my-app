@@ -1,4 +1,62 @@
 <p>home works!</p>
+
+<app-news-rss></app-news-rss>
+<!-- Tabs -->
+<!-- <mat-tab-group>
+  <ng-template *ngFor="let item of tabData">
+    <mat-tab [label]="item.label"> {{ item.content }}</mat-tab>
+  </ng-template>
+</mat-tab-group> -->
+
+<!-- Input -->
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <span matPrefix>admin.</span>
+    <input
+      type="email"
+      matInput
+      [formControl]="emailFormControl"
+      placeholder="Ex. pat@example.com"
+      [errorStateMatcher]="matcher"
+    />
+  </mat-form-field>
+  <!-- <div><mat-hint>Errors appear instantly!</mat-hint></div> -->
+  <span matSuffix>@apple.com</span>
+
+  <mat-error
+    *ngIf="
+      emailFormControl.hasError('email') &&
+      !emailFormControl.hasError('required')
+    "
+  >
+    Please enter a valid email address
+  </mat-error>
+</form>
+
+<!-- Text Area -->
+<mat-form-field>
+  <mat-label>Autosize textarea</mat-label>
+  <textarea
+    matInput
+    cdkTextareaAutosize
+    #autosize="cdkTextareaAutosize"
+    cdkAutosizeMinRows="1"
+    cdkAutosizeMaxRows="5"
+  ></textarea>
+</mat-form-field>
+
+<!-- DropDown/ Select -->
+<mat-form-field>
+  <mat-label>Colors</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let color of colors" [value]="color.id">
+      {{ color.name }}</mat-option
+    >
+  </mat-select>
+</mat-form-field>
+
+<!-- Progress Spinner -->
 <div>
   <mat-progress-spinner
     *ngIf="isLoading"
@@ -6,14 +64,19 @@
   ></mat-progress-spinner>
 </div>
 
+<!-- Slider -->
 <div>
   <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
 </div>
+
+<!-- Checkbox -->
 <div>
   <mat-checkbox class="example-margin" [(ngModel)]="disabled">
     Not Disabled
   </mat-checkbox>
 </div>
+
+<!-- Radio button -->
 <div>
   <label id="example-radio-group-label">Pick your favorite season</label>
 
