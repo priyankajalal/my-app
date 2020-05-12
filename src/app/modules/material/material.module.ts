@@ -9,6 +9,8 @@ import { MatInputModule } from "@angular/material/input";
 import { MatIconModule } from "@angular/material/icon";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatTableModule } from "@angular/material/table";
+import { MatButtonModule } from "@angular/material";
+import { MatDividerModule } from "@angular/material/divider";
 
 let myModules: any[] = [
   CommonModule,
@@ -21,6 +23,8 @@ let myModules: any[] = [
   MatIconModule,
   MatTabsModule,
   MatTableModule,
+  MatButtonModule,
+  MatDividerModule,
 ];
 
 @NgModule({

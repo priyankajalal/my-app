@@ -13,11 +13,13 @@ import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { NewsComponent } from "./news/news.component";
 import { NewsRssComponent } from "./news-rss/news-rss.component";
 import { NewsRssBootstrapComponent } from "./news-rss-bootstrap/news-rss-bootstrap.component";
+import { ButtonDemoComponent } from "./button-demo/button-demo.component";
 
 export const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "news", component: NewsRssBootstrapComponent },
   { path: "portfolio", component: PortfolioComponent },
+  { path: "button", component: ButtonDemoComponent },
 ];
 
 @NgModule({
@@ -28,6 +30,7 @@ export const routes: Routes = [
     NewsComponent,
     NewsRssComponent,
     NewsRssBootstrapComponent,
+    ButtonDemoComponent,
   ],
   imports: [
     BrowserAnimationsModule,
